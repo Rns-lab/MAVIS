@@ -1,5 +1,5 @@
 {
-  "name": "Copy of Mavis",
+  "name": "Mavis",
   "description": "An application to enhance and translate plain text prompts into a perfect XML format using Gemini, with a special 'Thinking Mode' for complex queries. It leverages a knowledge base for specific contexts like the 'Lovable Prompt Directory'.",
   "requestFramePermissions": []
 }

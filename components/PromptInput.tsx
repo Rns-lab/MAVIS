@@ -49,7 +49,8 @@ export const PromptInput: React.FC<PromptInputProps> = ({ prompt, setPrompt, mod
           modelButton: 'bg-white/5 text-gray-500 hover:bg-white/10',
           modelButtonActive: 'bg-blue-500/20 text-blue-300 hover:bg-blue-500/30',
           exploreButton: 'bg-blue-800/50 text-blue-300 hover:bg-blue-800/70',
-          ideaButton: 'bg-gray-800/60 hover:bg-gray-700/80 text-gray-300'
+          ideaButton: 'bg-gray-800/60 hover:bg-gray-700/80 text-gray-300',
+          refreshButton: 'text-blue-400 hover:text-blue-300'
       },
       light: {
           container: 'bg-white/50 border-black/10',
@@ -59,7 +60,8 @@ export const PromptInput: React.FC<PromptInputProps> = ({ prompt, setPrompt, mod
           modelButton: 'bg-black/5 text-gray-500 hover:bg-black/10',
           modelButtonActive: 'bg-blue-500/20 text-blue-600 hover:bg-blue-500/30',
           exploreButton: 'bg-blue-100 text-blue-700 hover:bg-blue-200',
-          ideaButton: 'bg-gray-200/80 hover:bg-gray-300/90 text-gray-700'
+          ideaButton: 'bg-gray-200/80 hover:bg-gray-300/90 text-gray-700',
+          refreshButton: 'text-blue-600 hover:text-blue-500'
       }
   }
 
@@ -123,6 +125,15 @@ export const PromptInput: React.FC<PromptInputProps> = ({ prompt, setPrompt, mod
                     {idea}
                   </button>
                 ))}
+              </div>
+              <div className="mt-4 text-center">
+                <button
+                  onClick={onExploreIdeas}
+                  disabled={isFetchingIdeas}
+                  className={`text-xs font-semibold transition-colors disabled:opacity-60 disabled:cursor-wait ${themeClasses[theme].refreshButton}`}
+                >
+                  Refresh to get more ideas
+                </button>
               </div>
             </div>
           )}
